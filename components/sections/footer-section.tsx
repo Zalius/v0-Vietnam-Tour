@@ -4,22 +4,22 @@ import Link from "next/link";
 
 const footerLinks = {
   explore: [
-    { label: "Products", href: "#products" },
-    { label: "Technology", href: "#technology" },
-    { label: "Gallery", href: "#gallery" },
-    { label: "Accessories", href: "#accessories" },
+    { label: "All Tours", href: "/#tours" },
+    { label: "Experience", href: "/#technology" },
+    { label: "Gallery", href: "/#gallery" },
+    { label: "Reviews", href: "/#testimonials" },
   ],
   about: [
     { label: "Our Story", href: "#" },
-    { label: "Team", href: "#" },
-    { label: "Careers", href: "#" },
+    { label: "Local Guides", href: "#" },
+    { label: "Responsible Travel", href: "#" },
     { label: "Contact", href: "#" },
   ],
   service: [
     { label: "FAQ", href: "#" },
-    { label: "Shipping", href: "#" },
-    { label: "Returns", href: "#" },
-    { label: "Warranty", href: "#" },
+    { label: "Booking Terms", href: "#" },
+    { label: "Cancellations", href: "#" },
+    { label: "Travel Insurance", href: "#" },
   ],
 };
 
@@ -35,7 +35,7 @@ export function FooterSection() {
               EVASION
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Premium smart bottles engineered for adventure. GPS tracking, LED flashlight, and self-heating technology.
+              Small-group journeys across Vietnam — from the karsts of Ha Long Bay to the rice terraces of Sapa, led by local guides.
             </p>
           </div>
 
