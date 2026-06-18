@@ -18,6 +18,27 @@ function SubmitButton({ label }: { label: string }) {
   )
 }
 
+function FileInput({
+  id,
+  name,
+  multiple = false,
+}: {
+  id: string
+  name: string
+  multiple?: boolean
+}) {
+  return (
+    <input
+      id={id}
+      name={name}
+      type="file"
+      accept="image/*"
+      multiple={multiple}
+      className="text-sm text-muted-foreground file:mr-4 file:rounded-full file:border-0 file:bg-secondary file:px-4 file:py-2 file:text-sm file:font-medium file:text-secondary-foreground hover:file:bg-secondary/80"
+    />
+  )
+}
+
 const labelClass = "text-sm font-medium text-foreground"
 const inputClass =
   "rounded-lg border border-border bg-input px-4 py-2.5 text-sm text-foreground outline-none focus:ring-2 focus:ring-ring"
@@ -200,6 +221,13 @@ export function TourForm({
 
       {/* Images */}
       <div className="flex flex-col gap-2">
+        <label htmlFor="mainImageFile" className={labelClass}>
+          Main image upload
+        </label>
+        <FileInput id="mainImageFile" name="mainImageFile" />
+      </div>
+
+      <div className="flex flex-col gap-2">
         <label htmlFor="mainImage" className={labelClass}>
           Main image path or URL
         </label>
@@ -210,6 +238,13 @@ export function TourForm({
           className={inputClass}
           placeholder="/images/bottle-lake.png or https://…"
         />
+      </div>
+
+      <div className="flex flex-col gap-2">
+        <label htmlFor="galleryFiles" className={labelClass}>
+          Add gallery images
+        </label>
+        <FileInput id="galleryFiles" name="galleryFiles" multiple />
       </div>
 
       <div className="flex flex-col gap-2">
